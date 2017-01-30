@@ -1,8 +1,8 @@
 {
-  "name": "frontend-sdk",
-  "version": "1.3.0",
+  "name": "Vue Form",
+  "version": "0.1.0",
   "authors": [
-    "Marty Wallace <marty@martywallace.com>"
+    "Dale Chapman <dalejchapman@gmail.com>"
   ],
   "dependencies": {
     "vue": "^2.0.3",
