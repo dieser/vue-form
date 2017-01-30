@@ -1,0 +1,47 @@
+& {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition-duration: 300ms;
+	padding: 10px;
+	overflow: auto;
+	z-index: 10;
+
+	&.modal-transition-enter, &.modal-transition-leave-active {
+		.vue-modal-curtain {
+			opacity: 0;
+		}
+
+		.vue-modal-window {
+			opacity: 0;
+			margin-top: -30px;
+		}
+	}
+
+	.vue-modal-curtain {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(#333, 0.7);
+		transition: all 300ms ease-in-out;
+	}
+
+	.vue-modal-window {
+		position: relative;
+		max-width: 500px;
+		top: 50%;
+		margin: 0 auto;
+		transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		background: #FFF;
+		box-shadow: 0 1px 3px rgba(#000, 0.2);
+		transition: all 300ms ease-in-out;
+		max-height: 100%;
+		padding: 20px;
+		overflow: auto;
+	}
+}

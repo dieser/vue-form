@@ -1,0 +1,37 @@
+@mixin grid($size: 960px, $increment: 5, $gutter-horizontal: 20px, $gutter-vertical: 20px) {
+	@extend .clear;
+
+	display: block;
+	margin: 0 auto;
+	max-width: $size;
+
+	.column {
+		width: 100%;
+
+		@include mq-large {
+			float: left;
+
+			@for $i from 0 through 100 {
+				@if $i % $increment == 0 {
+					&--#{$i} { width: $i * 1%; }
+				}
+			}
+
+			&.gutter-before, &.gutter-half-before { padding-top: 0; }
+			&.gutter-after, &.gutter-half-after { padding-bottom: 0; }
+
+			&.gutter-before { padding-left: $gutter-horizontal; }
+			&.gutter-half-before { padding-left: $gutter-horizontal / 2; }
+			&.gutter-after { padding-right: $gutter-horizontal; }
+			&.gutter-half-after { padding-right: $gutter-horizontal / 2; }
+		}
+	}
+
+	.gutter-before { padding-top: $gutter-vertical; }
+	.gutter-half-before { padding-top: $gutter-vertical / 2; }
+	.gutter-after { padding-bottom: $gutter-vertical; }
+	.gutter-half-after { padding-bottom: $gutter-vertical / 2; }
+
+	.gutter { padding: $gutter-vertical 0; }
+	.gutter-half { padding: ($gutter-vertical / 2) 0; }
+}

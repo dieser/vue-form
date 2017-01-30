@@ -1,0 +1,31 @@
+$component-checkbox-size: 26px;
+
+& {
+	display: inline-block;
+	vertical-align: middle;
+	width: $component-checkbox-size;
+	height: $component-checkbox-size;
+	line-height: $component-checkbox-size;
+	background: #EEE;
+	border-radius: 2px;
+	cursor: pointer;
+	text-align: center;
+	overflow: hidden;
+
+	&:before {
+		color: #DDD;
+		font-family: 'icomoon';
+		content: '\e900';
+	}
+
+	&:hover {
+		background: #DDD;
+
+		&:before { color: #BBB; }
+		&.checked:before { color: #111; }
+	}
+
+	&.checked:before {
+		color: #444;
+	}
+}

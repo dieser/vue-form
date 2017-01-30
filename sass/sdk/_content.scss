@@ -1,0 +1,33 @@
+$content-element-gutter: 20px !default;
+$content-list-indent: 20px !default;
+//primary-text-color
+$ptc: #000;
+//secondary-text-color
+$stc: #555;
+//reversed-text-color
+$rtc: #fff;
+//highlighted-text
+$htc: #e74c3c;
+// primary-background-color
+$pbc: #fff;
+// secondary-background-color
+$sbc: #333;
+// highlighted-background-color
+$hbc: #2980b9;
+
+
+.content {
+	> h1, > h2, > h3, > h4, > h5, > h6, > hgroup, > p, > ul, > ol, > table, > pre, > figure,
+	figcaption, > iframe, > object, > embed, > form {
+		margin-bottom: $content-element-gutter;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	// Make lists list things again.
+	// ul, ol { padding-left: $content-list-indent; }
+	ul { list-style: none; }
+	ol { list-style: decimal; }
+}

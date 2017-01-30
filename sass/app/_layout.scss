@@ -1,0 +1,28 @@
+
+// default element styling
+
+.grid {
+	@include grid();
+	padding: 30px 20px;
+	text-align: center;
+}
+.grid--large {
+	@include grid(1200px);
+}
+
+//box shadow for blocks or elements level;
+.box-shadow {
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+}
+//adds bottom margin to element
+.margin-bottom {
+	margin-bottom: 15px;
+}
+
+a {
+	text-transform: uppercase;
+	color: $rtc;
+	&:hover {
+		color: $htc;
+	}
+}

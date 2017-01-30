@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Cart</title>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans|Yeseva+One">
+		<link rel="stylesheet" href="/css/vendor.bundle.css">
+		<link rel="stylesheet" href="/css/components.bundle.css">
+		<link rel="stylesheet" href="/css/app.css">
+
+	</head>
+	<body>
+		<main>
+			<div class="form__container">
+				<form action="https://formspree.io/dalejchapman@gmail.com" method="post">
+					<h1>{{ form.title }}</h1>
+					<p>{{ form.desc }}</p>
+					<!-- <label for="name">
+						<input type="text" name="name" placeholder="name">
+						<div class="form__text">
+							name
+						</div>
+					</label> -->
+					<label class="label">
+						<input type="text" name="name" required>
+						<div class="form__text">
+							name
+						</div>
+					</label>
+					<label class="label">
+						<input type="email" name="_replyto" value="" required>
+						<div class="form__text">
+							email
+						</div>
+					</label>
+					<button type="submit" name="Send">Submit</button>
+				</form>
+			</div>
+		</main>
+
+		<script src="/js/vendor.bundle.js"></script>
+		<script src="/js/components.bundle.js"></script>
+		<script src="/js/app.js"></script>
+	</body>
+</html>
