@@ -13,7 +13,8 @@ module.exports = {
 		include: [
 			'example',
 			'checkbox',
-			'modal'
+			'modal',
+			'form'
 		]
 	}
 };
